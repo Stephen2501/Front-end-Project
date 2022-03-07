@@ -3,24 +3,24 @@ import {useContext} from 'react';
 export default function ArticleCard({article}) {
 
     return (
-        <li key={(article.article_id)}>
+        <li className="articleCard" key={(article.article_id)}>
             <div className="article_title">
             {article.title}
             </div>
             <div className="article_topic">
-            {article.topic}
+            Topic: {article.topic}
             </div>
             <div className="article_author">
-            {article.author}
+            Author: {article.author}
             </div>
             <div className="article_votes">
-            {article.votes}
-            </div>
-            <div className="article_date">
-            {article.created_at}
+            Votes: {article.votes}
             </div>
             <div className="article_comment_count">
-            {article.comment_count}
+            Comment count: {article.comment_count}
+            </div>
+            <div className="article_date">
+            Created at: {article.created_at}
             </div>
         </li>
     )
