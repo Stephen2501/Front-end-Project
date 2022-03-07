@@ -15,13 +15,14 @@ export default function Articles() {
         }
     }, [topic])
 
-	return (<div id="articlePage">
+	return (
+        <div id="articles">
         <TopicDropdown setTopic={setTopic} />
         <ul className="articleList">
             {articles.map((article) => (
                 <ArticleCard key={article.article_id} article={article} />
             ))}
         </ul>
-    </div>
+        </div>
     )
 }

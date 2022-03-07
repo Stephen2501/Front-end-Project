@@ -3,7 +3,7 @@ import {useContext} from 'react';
 export default function ArticleCard({article}) {
 
     return (
-        <li key={(article.article_id)}>
+        <li className="articleCard" key={(article.article_id)}>
             <div className="article_title">
             {article.title}
             </div>
