@@ -16,10 +16,16 @@ export default function ArticleCard({article}) {
             Votes: {article.votes}
             </div>
             <div className="article_comment_count">
+
             Comment Count: {article.comment_count}
             </div>
             <div className="article_date">
             Created: {article.created_at}
+            Comment count: {article.comment_count}
+            </div>
+            <div className="article_date">
+            Created at: {article.created_at}
+
             </div>
         </li>
     )
