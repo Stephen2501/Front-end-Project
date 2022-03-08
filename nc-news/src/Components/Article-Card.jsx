@@ -4,7 +4,7 @@ export default function ArticleCard({article}) {
     return (
         <li className="articleCard" key={(article.article_id)}>
             <div className="article_title">
-                <Link to='/articles/:article_id' article_id={article.article_id}>{article.title} </Link>
+                <Link to={`/article/${article.article_id}`} article_id={article.article_id}>{article.title} </Link>
             </div>
             <div className="article_topic">
             Topic: {article.topic}

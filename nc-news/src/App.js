@@ -14,6 +14,7 @@ import { useState } from 'react';
 
 function App() {
   const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState([])
 
   return (
     <BrowserRouter>
@@ -24,7 +25,7 @@ function App() {
           <Route path="/Users" element={<Users/>} />
           <Route path="/articles" element={<Articles setArticles={setArticles} articles={articles}/>} />
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
-          <Route path="/article/:article_id" element={<FullArticle />} />
+          <Route path="/article/:article_id" element={<FullArticle setArticle={setArticle} article={article}/>} />
         </Routes>
       </div>
     </BrowserRouter>
