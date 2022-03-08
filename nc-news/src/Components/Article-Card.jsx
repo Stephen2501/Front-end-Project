@@ -1,11 +1,10 @@
-import {useContext} from 'react';
-
+import { Link } from "react-router-dom";
 export default function ArticleCard({article}) {
 
     return (
         <li className="articleCard" key={(article.article_id)}>
             <div className="article_title">
-            {article.title}
+                <Link to='/articles/:article_id' article_id={article.article_id}>{article.title} </Link>
             </div>
             <div className="article_topic">
             Topic: {article.topic}

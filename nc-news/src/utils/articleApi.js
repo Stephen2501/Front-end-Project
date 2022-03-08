@@ -11,3 +11,10 @@ export const fetchArticlesByTopic = (topic) => {
         return response.data.articles
     })
 }
+
+export const fetchArticleById = (article_id) => {
+    return axios.get(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}`).then((response) => {
+        console.log(response.data.articles)
+        return response.data.articles
+    })
+}

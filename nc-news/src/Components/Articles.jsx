@@ -1,28 +1,26 @@
-import { useEffect, useState } from "react"
-import ArticleCard from './Article-Card'
+import { useEffect, useState } from "react";
+import ArticleCard from "./Article-Card";
 import TopicDropdown from "./Topic-Dropdown";
-import * as articleApi from '../utils/articleApi'
+import * as articleApi from "../utils/articleApi";
 
-export default function Articles() {
-    const [articles, setArticles] = useState([]);
-    const [topic, setTopic] = useState('')
 
-    useEffect(() => {
-        if(!topic) {
-        articleApi.fetchArticles().then((articlesFromApi) => setArticles(articlesFromApi))
-        } else {
-        articleApi.fetchArticlesByTopic(topic).then((articlesFromApi) => setArticles(articlesFromApi)) 
-        }
-    }, [topic])
+export default function Articles({articles, setArticles}) {
+  
 
-	return (
-        <div id="articles">
-        <TopicDropdown setTopic={setTopic} />
+  useEffect(() => {
+    articleApi
+      .fetchArticles()
+      .then((articlesFromApi) => setArticles(articlesFromApi));
+  }, []);
+
+  return (
+      <div id="articles">
+        <TopicDropdown setArticles={setArticles} articles={articles}/>
         <ul className="articleList">
-            {articles.map((article) => (
-                <ArticleCard key={article.article_id} article={article} />
-            ))}
+          {articles.map((article) => (
+            <ArticleCard key={article.article_id} article={article} />
+          ))}
         </ul>
-        </div>
-    )
+      </div>
+  );
 }
