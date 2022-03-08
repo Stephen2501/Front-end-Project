@@ -41,7 +41,7 @@
   padding: 10px;
   list-style-type: none;
   margin: 0;
-  border: 3px double rgba(28,110,164,0.41);
+  border: 3px double rgba(28, 110, 164, 0.41);
   font-size: 10px;
   background-color: rgb(210, 83, 83);
   margin: 15px;
@@ -52,7 +52,6 @@
 .articleList {
   padding: 0;
   list-style-type: none;
-
 }
 
 .article_title {
@@ -61,21 +60,51 @@
 }
 
 .article_topic {
-  text-align: left
+  text-align: left;
 }
 
 .article_author {
-  text-align: left
+  text-align: left;
 }
 
 .article_votes {
- text-align: right
+  text-align: right;
 }
 
 .article_date {
-  text-align: right
- }
+  text-align: right;
+}
 
- .article_comment_count {
-  text-align: right
+.article_comment_count {
+  text-align: right;
+}
+
+
+.full_article {
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+  border: 3px double rgba(28, 110, 164, 0.41);
+  font-size: 10px;
+  background-color: rgb(210, 83, 83);
+  margin: 15px;
+  -webkit-border-radius: 0px 12px 0px 12px;
+  border-radius: 0px 12px 0px 12px;
+}
+
+.full_article_topic {
+  font-size: 15px;
+  text-align: left;
+}
+
+.full_article_info {
+  font-size: 20px;
+}
+
+.full_article_body {
+  font-size: 20px;
+}
+
+.created {
+  font-size: 15px;
 }
