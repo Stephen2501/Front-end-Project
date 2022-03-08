@@ -16,16 +16,18 @@ export default function FullArticle({ article, setArticle }) {
       <h1 className="article_h1">
         {article.title} <br />
       </h1>
+      <div className="created">
+        Posted: {article.created_at} <br />
+        </div>
       <h2 className="full_article_topic">
         Author: {article.author} <br />
         Topic: {article.topic} <br />
       </h2>
-      <div className="full_article_body">
-        {article.body} <br /> <br />
-      </div>
       <div className="full_article_info">
-          Votes: {article.votes} <br/>
-          Posted: {article.created_at} <br />
+        Votes: {article.votes} <br />
+      </div>
+      <div className="full_article_body">
+        {article.body}
       </div>
     </div>
   );

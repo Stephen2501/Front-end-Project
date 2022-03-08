@@ -92,5 +92,21 @@
 }
 
 .full_article_topic {
-  
+  font-size: 15px;
+  text-align: left;
+}
+
+.full_article_info {
+  position: relative;
+  left: 40%;
+  bottom: 49px;
+  font-size: 20px;
+}
+
+.full_article_body {
+  font-size: 20px;
+}
+
+.created {
+  font-size: 15px;
 }
