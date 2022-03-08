@@ -17,3 +17,7 @@ export const fetchArticleById = (article_id) => {
         return response.data.article
     })
 }
+
+export const voteOnArticle = (article_id, voteChange) => {
+    return axios.patch(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}`, voteChange)
+}
