@@ -52,8 +52,7 @@
 .articleList {
   padding: 0;
   list-style-type: none;
-  
-   
+
 }
 
 .article_title {
@@ -79,4 +78,4 @@
 
  .article_comment_count {
   text-align: right
- }
+}
