@@ -4,6 +4,7 @@ import * as articleApi from '../utils/articleApi'
 export default function Votes({article, article_id}) {
 
     const [vote, setVote] = useState(0)
+    const [isDisabled, setIsDisabed] = useState(false)
 
     useEffect(() => {
         setVote(article.votes)
@@ -11,7 +12,8 @@ export default function Votes({article, article_id}) {
 
     const handleClick = (voteChange) => {
         setVote((currentVotes) => {
-            return (currentVotes += voteChange)
+            setIsDisabed(true)
+            return (currentVotes + voteChange)
         })
         articleApi.voteOnArticle(article_id, {votes: voteChange});
     }
@@ -21,8 +23,8 @@ export default function Votes({article, article_id}) {
             <div>
                 Votes: {vote}
             </div>
-            <button onClick={() => handleClick(1)} >Up-Vote</button>
-            <button onClick={() => handleClick(-1)} >Down-Vote</button>
+            <button disabled={isDisabled} onClick={() => handleClick(1)} >Up-Vote</button>
+            <button disabled={isDisabled} onClick={() => handleClick(-1)} >Down-Vote</button>
         </section>
     )
 }
