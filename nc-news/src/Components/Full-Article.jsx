@@ -14,7 +14,6 @@ export default function FullArticle({ article, setArticle }) {
       .then((articleFromApi) => setArticle(articleFromApi));
     }, []);
 
-    console.log(article)
     return (
         <div className="full_article">
       <h1 className="article_h1">

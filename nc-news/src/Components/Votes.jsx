@@ -10,14 +10,11 @@ export default function Votes({article, article_id}) {
     }, [article])
 
     const handleClick = (voteChange) => {
-        console.log(vote)
         setVote((currentVotes) => {
-            console.log(currentVotes)
             return (currentVotes += voteChange)
         })
         articleApi.voteOnArticle(article_id, {votes: voteChange});
     }
-    console.log(vote)
 
     return (
         <section>
