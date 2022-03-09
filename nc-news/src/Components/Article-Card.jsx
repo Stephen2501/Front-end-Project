@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 export default function ArticleCard({article}) {
 
+    const date = new Date(Date.parse(article.created_at))
+    
+
     return (
         <li className="articleCard" key={(article.article_id)}>
             <div className="article_title">
@@ -16,16 +19,10 @@ export default function ArticleCard({article}) {
             Votes: {article.votes}
             </div>
             <div className="article_comment_count">
-
             Comment Count: {article.comment_count}
             </div>
             <div className="article_date">
-            Created: {article.created_at}
-            Comment count: {article.comment_count}
-            </div>
-            <div className="article_date">
-            Created at: {article.created_at}
-
+            Created: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}
             </div>
         </li>
     )
