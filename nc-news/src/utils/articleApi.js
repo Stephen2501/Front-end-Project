@@ -19,5 +19,6 @@ export const fetchArticleById = (article_id) => {
 }
 
 export const voteOnArticle = (article_id, voteChange) => {
-    return axios.patch(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}`, voteChange)
+  console.log(voteChange.votes);
+return axios.patch(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}`, {votes: voteChange.votes})
 }

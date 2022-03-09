@@ -14,7 +14,7 @@ export default function FullArticle({ article, setArticle }) {
       .then((articleFromApi) => setArticle(articleFromApi));
     }, []);
 
-    
+    console.log(article)
     return (
         <div className="full_article">
       <h1 className="article_h1">
@@ -28,7 +28,7 @@ export default function FullArticle({ article, setArticle }) {
         Topic: {article.topic} <br />
       </h2>
       <div className="full_article_info">
-          <Votes votes={article.votes} article_id={article_id}/>
+          <Votes article={article} article_id={article_id}/>
       </div>
       <div className="full_article_body">{article.body}</div>
     </div>
