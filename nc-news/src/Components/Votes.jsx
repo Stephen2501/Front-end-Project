@@ -15,7 +15,11 @@ export default function Votes({article, article_id}) {
 
             return (currentVotes + voteChange)
         })
-        articleApi.voteOnArticle(article_id, {votes: voteChange});
+        articleApi.voteOnArticle(article_id, {votes: voteChange})
+        .catch((err) => setVote(currentVotes => {
+            return (currentVotes - voteChange)
+        }
+        ));
     }
     
 let voteChange = vote - article.votes

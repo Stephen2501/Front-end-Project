@@ -108,3 +108,24 @@
 .created {
   font-size: 15px;
 }
+
+
+.commentCard {
+  padding: 10px;
+  list-style-type: none;
+  border: 3px double rgba(28, 110, 164, 0.41);
+  font-size: 100%;
+  text-align: left;
+  background-color: rgb(133, 133, 133);
+  margin: 5px;
+}
+
+.commentList {
+  margin: 15px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.comment_author {
+  font-size: 150%;
+}
