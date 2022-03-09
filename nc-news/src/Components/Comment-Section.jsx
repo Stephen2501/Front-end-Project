@@ -11,7 +11,7 @@ export default function CommentSection({article_id}) {
             setComments(commentsFromApi)
         })
     }, [comments])
-    console.log(comments)
+
 
     return <div>
        <ul className="commentList">
