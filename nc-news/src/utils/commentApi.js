@@ -7,3 +7,8 @@ export const fetchComments = (article_id) => {
       return response.data.comments;
     });
 };
+
+export const postComment = (article_id, newComment) => {
+  console.log(newComment)
+  return axios.post(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}/comments`, newComment)
+}

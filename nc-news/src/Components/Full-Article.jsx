@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as articleApi from "../utils/articleApi";
 import { useParams } from "react-router-dom";
 import Votes from "./Votes";
+import PostComment from "./Post-Comment";
 import CommentSection from "./Comment-Section";
 
 export default function FullArticle({ article, setArticle }) {
@@ -31,6 +32,9 @@ export default function FullArticle({ article, setArticle }) {
           <Votes article={article} article_id={article_id} />
         </div>
         <div className="full_article_body">{article.body}</div>
+      </div>
+      <div className="post_comment">
+        <PostComment article_id={article_id}/>
       </div>
       <div className="comment_section">
         <CommentSection article_id={article_id}/>
