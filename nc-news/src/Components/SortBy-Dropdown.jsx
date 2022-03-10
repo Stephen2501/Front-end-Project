@@ -1,7 +1,7 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 
-export default function SortByDropdown() {
+export default function SortByDropdown({setSortBy}) {
 
     return (
     <Dropdown>
@@ -14,21 +14,24 @@ export default function SortByDropdown() {
 
         <Dropdown.Menu>
             <Dropdown.Item
+                onClick={() => setSortBy('created_at')}
                 as={Link}
-                to={'/articles?sortby=created_at'} 
+                to={'/articles?sort_by=created_at'} 
                 sortby="created_at">
                 Date
             </Dropdown.Item>
 
             <Dropdown.Item
+                onClick={() => setSortBy('comment_count')}
                 as={Link}
-                to={'/articles?sortby=comment_count'} >
+                to={'/articles?sort_by=comment_count'} >
                 Comment Count
             </Dropdown.Item>
 
             <Dropdown.Item
+                onClick={() => setSortBy('votes')}
                 as={Link}
-                to={'/articles?sortby=votes'} >
+                to={'/articles?sort_by=votes'} >
                 Votes
             </Dropdown.Item>
 
