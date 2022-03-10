@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const fetchArticles = () => {
+export const fetchArticles = (sort_by = 'created_at') => {
   return axios
-    .get("https://steves-nc-news.herokuapp.com/api/articles")
+    .get(`https://steves-nc-news.herokuapp.com/api/articles?sort_by=${sort_by}`)
     .then((response) => {
       return response.data.articles;
     });

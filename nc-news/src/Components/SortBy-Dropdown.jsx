@@ -22,21 +22,16 @@ export default function SortByDropdown() {
 
             <Dropdown.Item
                 as={Link}
-                to={'/articles?sortby=comment_count'} sortby="comment_count">
+                to={'/articles?sortby=comment_count'} >
                 Comment Count
             </Dropdown.Item>
 
             <Dropdown.Item
                 as={Link}
-                to={'/articles?sortby=votes'} sortby="votes">
+                to={'/articles?sortby=votes'} >
                 Votes
             </Dropdown.Item>
 
-            <Dropdown.Item
-                as={Link}
-                to={'/articles'} >
-                Reset
-            </Dropdown.Item>
         </Dropdown.Menu>
     </Dropdown>
     )
