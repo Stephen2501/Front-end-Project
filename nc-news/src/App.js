@@ -26,6 +26,7 @@ function App() {
           <Route path="/articles" element={<Articles setArticles={setArticles} articles={articles}/>} />
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
           <Route path="/article/:article_id" element={<FullArticle setArticle={setArticle} article={article}/>} />
+    {/* <Route path="/articles/:sort_by" element={<ArticleSortBy setArticle={setArticle} article={article}/>} /> */}
         </Routes>
       </div>
     </BrowserRouter>
