@@ -3,7 +3,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 import { fetchTopics } from "../utils/topicApi";
 
-export default function TopicDropdown({articles, setArticles}) {
+export default function TopicDropdown({setArticles}) {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {

@@ -7,8 +7,10 @@ import Users from './Components/Users';
 import Articles from './Components/Articles'
 import FullArticle from './Components/Full-Article';
 import ArticleTopic from './Components/Article-Topic';
+import ArticleSortBy from './Components/Article-SortBy';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import { useState } from 'react';
+
 
 
 
@@ -26,6 +28,7 @@ function App() {
           <Route path="/articles" element={<Articles setArticles={setArticles} articles={articles}/>} />
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
           <Route path="/article/:article_id" element={<FullArticle setArticle={setArticle} article={article}/>} />
+          <Route path="/articles" search="?sort_by=" element={<ArticleSortBy setArticles={setArticles} articles={articles}/>} />
         </Routes>
       </div>
     </BrowserRouter>

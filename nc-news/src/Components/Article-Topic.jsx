@@ -1,6 +1,7 @@
 import { useEffect} from "react";
 import * as articleApi from "../utils/articleApi";
 import TopicDropdown from "./Topic-Dropdown";
+import SortByDropdown from "./SortBy-Dropdown";
 import { useParams } from "react-router-dom";
 
 import ArticleCard from "./Article-Card";
@@ -17,7 +18,8 @@ export default function ArticleTopic({ articles, setArticles }) {
 
   return (
     <div>
-      <TopicDropdown setArticles={setArticles} />
+      <SortByDropdown />
+      <TopicDropdown />
       <ul className="articleList">
         {articles.map((article) => (
           <ArticleCard key={article.article_id} article={article} />
