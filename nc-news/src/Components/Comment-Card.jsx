@@ -7,7 +7,7 @@ export default function CommentCard({comment}){
         <div className="comment_author">
         Author: {comment.author} <br/>
         </div>
-        Posted: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}<br/>
+        Posted: {`${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`}<br/>
         Votes: {comment.votes}<br/><br />
         {comment.body}<br/><br/>
         </li>

@@ -30,7 +30,6 @@ export default function TopicDropdown({articles, setArticles}) {
           >
             <Link
               to={`/articles/${topic.slug}`}
-              setArticles={setArticles}
               topic={`${topic.slug}`}
             >
               {topic.slug}
