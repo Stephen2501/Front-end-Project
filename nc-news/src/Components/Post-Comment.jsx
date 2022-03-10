@@ -7,8 +7,6 @@ export default function PostComment({article_id}) {
 
     const [newComment, setNewComment] = useState({})
     const [postMsg, setPostMsg] = useState('')
-    const [username, setUserName] = useState('')
-    const [body, setBody] = useState('')
 
     const handleSubmit = (event) => {
 		event.preventDefault();
