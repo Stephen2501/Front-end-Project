@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
-export default function OrderBy({sort_by}) {
+export default function OrderBy({setOrderBy}) {
     return (
         <div>
-        <button as={Link} to={`/articles?sort_by=${sort_by}&order_by=ASC`} >ASC</button>
-        <button as={Link} to={`/articles?sort_by=${sort_by}&order_by=DESC`}>DESC</button>
+        <button id='ASC' onClick={() => setOrderBy('ASC')} >ASC</button>
+        <button id='DESC' onClick={() => setOrderBy('DESC')}>DESC</button>
         </div>
     )
 }

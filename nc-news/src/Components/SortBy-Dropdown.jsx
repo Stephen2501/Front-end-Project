@@ -17,7 +17,7 @@ export default function SortByDropdown({setSortBy}) {
                 onClick={() => setSortBy('created_at')}
                 as={Link}
                 to={'/articles?sort_by=created_at'} 
-                sortby="created_at">
+                >
                 Date
             </Dropdown.Item>
 
