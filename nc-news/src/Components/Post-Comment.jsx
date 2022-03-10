@@ -23,6 +23,7 @@ export default function PostComment({article_id}) {
                     console.log(newComment)
 					postComment(article_id, newComment).then(() => {
 						setPostMsg('Comment posted');
+                        event.target.reset()
 					});
                 } else {
                     setPostMsg('Unable to post comment');
