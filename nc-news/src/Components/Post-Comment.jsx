@@ -5,7 +5,7 @@ import moment from 'react-moment'
 
 export default function PostComment({article_id}) {
 
-    const [newComment, setNewComment] = useState({})
+    const [newComment, setNewComment] = useState({body: '', username: 'cooljmessy'})
     const [postMsg, setPostMsg] = useState('')
 
     const handleSubmit = (event) => {
@@ -24,11 +24,11 @@ export default function PostComment({article_id}) {
                         event.target.reset()
 					});
                 } else {
-                    setPostMsg('Unable to post comment');
+                    setPostMsg('Unable to post comment, user does not exist');
                 }
 			})
 			.catch(() => {
-				setPostMsg('Unable to post comment');
+				setPostMsg('Unable to post comment, user does not exist');
 			});
 	};
 
@@ -37,6 +37,7 @@ export default function PostComment({article_id}) {
         <label className='comment_username'>
             Username: <span />
             <input
+                value={newComment.username}
                 onChange={(event) =>
                     setNewComment((preComment) => {
                         return { ...preComment, username: event.target.value };
@@ -48,6 +49,7 @@ export default function PostComment({article_id}) {
         <label className='comment_body'>
             Body: <span />
             <input
+            value={newComment.body}
                 onChange={(event) =>
                     setNewComment((preComment) => {
                         return { ...preComment, body: event.target.value};
