@@ -9,21 +9,19 @@ import OrderBy from "./Order-By";
 export default function Articles({ articles, setArticles }) {
   const [sortBy, setSortBy] = useState("created_at");
   const [orderBy, setOrderBy] = useState("DESC");
-  const [topic, setTopic] = useState(undefined);
 
   useEffect(() => {
     articleApi
-      .fetchArticles(topic, sortBy, orderBy)
+      .fetchArticles(sortBy, orderBy)
       .then((articlesFromApi) => setArticles(articlesFromApi));
-  }, [topic, sortBy, orderBy]);
+  }, [sortBy, orderBy]);
 
-  console.log(topic);
 
   return (
     <div id="articles">
       <SortByDropdown setSortBy={setSortBy} />
       <OrderBy setOrderBy={setOrderBy} />
-      <TopicDropdown setTopic={setTopic} />
+      <TopicDropdown />
       <ul className="articleList">
         {articles.map((article) => (
           <ArticleCard key={article.article_id} article={article} />

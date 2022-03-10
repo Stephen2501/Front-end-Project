@@ -27,11 +27,12 @@ export default function TopicDropdown({setArticles, setTopic}) {
           <Dropdown.Item
             item={topic}
             key={topic.slug}
-          >
             
+          >
             <Link
               to={`/articles/${topic.slug}`}
               setArticles={setArticles}
+              
               topic={`${topic.slug}`}
             >
               {topic.slug}
