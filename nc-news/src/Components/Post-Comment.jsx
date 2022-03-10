@@ -7,6 +7,8 @@ export default function PostComment({article_id}) {
 
     const [newComment, setNewComment] = useState({})
     const [postMsg, setPostMsg] = useState('')
+    const [username, setUserName] = useState('')
+    const [body, setBody] = useState('')
 
     const handleSubmit = (event) => {
 		event.preventDefault();
@@ -33,7 +35,7 @@ export default function PostComment({article_id}) {
 
     return (
         <form onSubmit={handleSubmit}>
-        <label>
+        <label className='comment_username'>
             Username: <span />
             <input
                 onChange={(event) =>
@@ -43,8 +45,8 @@ export default function PostComment({article_id}) {
                 }
                 required
             />
-        </label>
-        <label>
+        </label> <br/><br />
+        <label className='comment_body'>
             Body: <span />
             <input
                 onChange={(event) =>
@@ -53,7 +55,7 @@ export default function PostComment({article_id}) {
                     })
                 }
             />
-        </label>
+        </label> <br/><br />
         <button type='submit'>Post comment</button>
         <h3>{postMsg}</h3>
     </form>
