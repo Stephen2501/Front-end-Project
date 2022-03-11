@@ -6,19 +6,22 @@ import Home from './Components/Home';
 import Users from './Components/Users';
 import Articles from './Components/Articles'
 import FullArticle from './Components/Full-Article';
+import Login from './Components/Login';
 import ArticleTopic from './Components/Article-Topic';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import { useState } from 'react';
-
+import {UserLoginContext} from './Context/userLogin'
 
 
 
 function App() {
+  const [currentUser, setCurrentUser] = useState('jessjelly')
   const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState([])
 
   return (
     <BrowserRouter>
+    <UserLoginContext.Provider value={{currentUser, setCurrentUser}}>
       <div className="App">
         <Header />
         <Routes>
@@ -27,9 +30,10 @@ function App() {
           <Route path="/articles" element={<Articles setArticles={setArticles} articles={articles}/>} />
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
           <Route path="/article/:article_id" element={<FullArticle setArticle={setArticle} article={article}/>} />
-    {/* <Route path="/articles/:sort_by" element={<ArticleSortBy setArticle={setArticle} article={article}/>} /> */}
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
+      </UserLoginContext.Provider>
     </BrowserRouter>
   );
 }

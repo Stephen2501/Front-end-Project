@@ -10,11 +10,8 @@ import OrderBy from "./Order-By";
 export default function Articles({ articles, setArticles }) {
   const [sortBy, setSortBy] = useState("created_at");
   const [orderBy, setOrderBy] = useState("DESC");
-
-
-export default function Articles({articles, setArticles}) {
   
-  const [sortBy, setSortBy] = useState('created_at')
+
 
 
   useEffect(() => {

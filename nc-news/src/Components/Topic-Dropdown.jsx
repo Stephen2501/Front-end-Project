@@ -35,7 +35,7 @@ export default function TopicDropdown({setArticles, setTopic}) {
               setArticles={setArticles}
 
               topic={`${topic.slug}`}
-
+              >
               {topic.slug}
             </Link>
           </Dropdown.Item>
