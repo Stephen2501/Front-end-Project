@@ -9,6 +9,9 @@ export const fetchComments = (article_id) => {
 };
 
 export const postComment = (article_id, newComment) => {
-  console.log(newComment)
   return axios.post(`https://steves-nc-news.herokuapp.com/api/articles/${article_id}/comments`, newComment)
+}
+
+export const deleteCommentById = (comment_id) => {
+  return axios.delete(`https://steves-nc-news.herokuapp.com/api/comments/${comment_id}`)
 }

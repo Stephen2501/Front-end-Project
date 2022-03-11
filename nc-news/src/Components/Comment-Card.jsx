@@ -1,15 +1,39 @@
-export default function CommentCard({comment}){
+import { deleteCommentById } from "../utils/commentApi";
+import { useContext, useState } from "react";
+import { UserLoginContext } from "../Context/userLogin";
 
-    const date = new Date(Date.parse(comment.created_at))
+export default function CommentCard({ comment }) {
+  const [deleteMsg, setDeleteMsg] = useState("");
+  const { currentUser, setCurrentUser } = useContext(UserLoginContext);
+  const date = new Date(Date.parse(comment.created_at));
 
-    return ( 
-    <li className="commentCard" key={(comment.comment_id)}>
-        <div className="comment_author">
-        Author: {comment.author} <br/>
-        </div>
-        Posted: {`${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`}<br/>
-        Votes: {comment.votes}<br/><br />
-        {comment.body}<br/><br/>
-        </li>
-    )
+  return (
+    <li className="commentCard" key={comment.comment_id}>
+      <div className="comment_author">
+        Author: {comment.author} <br />
+      </div>
+      Posted: {`${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`}
+      <br />
+      Votes: {comment.votes}
+      <br />
+      <br />
+      {comment.body}
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          if (comment.author === currentUser) {
+            deleteCommentById(comment.comment_id);
+            setDeleteMsg('Comment deleted')
+        } else {
+            setDeleteMsg("Can't delete comment that you are not author of")
+        }
+        }}
+        value="delete item"
+      >
+        Delete item
+      </button><br/>
+      {deleteMsg}
+    </li>
+  );
 }
