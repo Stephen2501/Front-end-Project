@@ -28,9 +28,13 @@ export default function Articles({ articles, setArticles }) {
   return (
 
     <div id="articles">
+      <div className="sorts">
       <SortByDropdown setSortBy={setSortBy} />
+      <div className="order">
       <OrderBy setOrderBy={setOrderBy} />
+      </div>
       <TopicDropdown />
+      </div>
       <ul className="articleList">
         {articles.map((article) => (
           <ArticleCard key={article.article_id} article={article} />

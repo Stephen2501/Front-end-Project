@@ -45,7 +45,7 @@ export default function PostComment({article_id}) {
                 required
             />
         </label> <br/><br />
-        <button type='submit'>Post comment</button>
+        <button className="comment-button" type='submit'>Post comment</button>
         <h3>{postMsg}</h3>
     </form>
     )

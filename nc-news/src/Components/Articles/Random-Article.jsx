@@ -6,7 +6,7 @@ export default function RandomArticle() {
   return (
     <div className="random-article">
       <Link to={`/article/${randomArticle}`}>
-        <button>Random Article</button>
+        <button className="button1">Random Article</button>
       </Link>
     </div>
   );

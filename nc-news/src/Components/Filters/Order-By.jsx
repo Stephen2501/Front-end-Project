@@ -2,9 +2,9 @@
 
 export default function OrderBy({setOrderBy}) {
     return (
-        <div>
-        <button id='ASC' onClick={() => setOrderBy('ASC')} >ASC</button>
-        <button id='DESC' onClick={() => setOrderBy('DESC')}>DESC</button>
+        <div >
+        <button className="order-buttons" id='ASC' onClick={() => setOrderBy('ASC')} >High to low ↑↓</button>
+        <button className="order-buttons" id='DESC' onClick={() => setOrderBy('DESC')}>Low to high ↓↑</button>
         </div>
     )
 }
