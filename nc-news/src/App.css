@@ -139,3 +139,18 @@
   background-color: rgb(133, 133, 133);
   margin: 20px;
 }
+
+.user_card {
+  padding: 10px;
+  list-style-type: none;
+  border: 3px double rgba(28, 110, 164, 0.41);
+  font-size: 100%;
+  text-align: centre;
+  background-color: rgb(191, 191, 10);
+  margin: 20px;
+}
+
+.user_avatar {
+  height: 50%;
+  width: 50%;
+}

@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home setArticle={setArticle} article={article} />}/>
           <Route path="/Users" element={<Users/>} />
           <Route path="/articles" element={<Articles setArticles={setArticles} articles={articles}/>} />
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
