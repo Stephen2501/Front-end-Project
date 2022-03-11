@@ -146,11 +146,27 @@
   border: 3px double rgba(28, 110, 164, 0.41);
   font-size: 100%;
   text-align: centre;
-  background-color: rgb(191, 191, 10);
+  background-color: rgb(227, 227, 21);
   margin: 20px;
 }
 
 .user_avatar {
   height: 50%;
   width: 50%;
+}
+
+.featured-article {
+  padding: 10px;
+  list-style-type: none;
+  border: 3px double rgba(28, 110, 164, 0.41);
+  font-size: 100%;
+  text-align: centre;
+  background-color: rgb(255, 108, 226);
+  margin: 20px;
+}
+
+.featured-article-body {
+  padding: 10px;
+  list-style-type: none;
+  border: 3px double rgba(28, 110, 164, 0.41);
 }
