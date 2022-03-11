@@ -1,4 +1,4 @@
-import { fetchComments } from "../utils/commentApi";
+import { fetchComments } from "../../utils/commentApi";
 import { useEffect, useState } from "react";
 import CommentCard from "./Comment-Card";
 

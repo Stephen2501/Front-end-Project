@@ -1,7 +1,7 @@
 import {useState, useContext} from 'react'
-import { postComment } from '../utils/commentApi'
-import { fetchUsers } from '../utils/userApi'
-import { UserLoginContext } from '../Context/userLogin'
+import { postComment } from '../../utils/commentApi'
+import { fetchUsers } from '../../utils/userApi'
+import { UserLoginContext } from '../../Context/userLogin'
 
 export default function PostComment({article_id}) {
 

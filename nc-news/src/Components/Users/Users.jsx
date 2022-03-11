@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchUsers } from "../utils/userApi";
+import { fetchUsers } from "../../utils/userApi";
 import UserCard from "./User-Card";
 
 export default function Users() {

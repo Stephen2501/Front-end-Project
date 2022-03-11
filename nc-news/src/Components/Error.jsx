@@ -4,5 +4,4 @@ export default function Error() {
            URL does not exist. Please update URL or use any of the navigation tools above.
         </div>
     )
-
 }

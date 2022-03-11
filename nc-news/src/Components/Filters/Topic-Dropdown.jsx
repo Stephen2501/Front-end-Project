@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
-import { fetchTopics } from "../utils/topicApi";
+import { fetchTopics } from "../../utils/topicApi";
 
 export default function TopicDropdown({setArticles, setTopic}) {
   const [topics, setTopics] = useState([]);

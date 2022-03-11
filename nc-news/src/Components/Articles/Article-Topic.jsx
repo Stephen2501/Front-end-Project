@@ -1,11 +1,11 @@
 import { useEffect, useState} from "react";
-import * as articleApi from "../utils/articleApi";
-import TopicDropdown from "./Topic-Dropdown";
-import SortByDropdown from "./SortBy-Dropdown";
+import * as articleApi from "../../utils/articleApi";
+import TopicDropdown from "../Filters/Topic-Dropdown";
+import SortByDropdown from "../Filters/SortBy-Dropdown";
 import { useParams } from "react-router-dom";
 
 import ArticleCard from "./Article-Card";
-import OrderBy from "./Order-By";
+import OrderBy from "../Filters/Order-By";
 
 export default function ArticleTopic({ articles, setArticles }) {
 

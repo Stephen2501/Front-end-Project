@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchArticles } from "../utils/articleApi";
+import { fetchArticles } from "../../utils/articleApi";
 
 export default function FeaturedArticle({article, setArticle}) {
 

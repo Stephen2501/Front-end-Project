@@ -1,6 +1,6 @@
-import { deleteCommentById } from "../utils/commentApi";
+import { deleteCommentById } from "../../utils/commentApi";
 import { useContext, useState } from "react";
-import { UserLoginContext } from "../Context/userLogin";
+import { UserLoginContext } from "../../Context/userLogin";
 
 export default function CommentCard({ comment }) {
   const [deleteMsg, setDeleteMsg] = useState("");

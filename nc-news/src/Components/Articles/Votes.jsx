@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import * as articleApi from '../utils/articleApi'
+import * as articleApi from '../../utils/articleApi'
 
 export default function Votes({article, article_id}) {
 

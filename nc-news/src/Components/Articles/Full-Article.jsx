@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import * as articleApi from "../utils/articleApi";
+import * as articleApi from "../../utils/articleApi";
 import { useParams } from "react-router-dom";
-import Votes from "./Votes";
-import PostComment from "./Post-Comment";
-import CommentSection from "./Comment-Section";
+import Votes from "../Articles/Votes";
+import PostComment from "../Comments/Post-Comment";
+import CommentSection from "../Comments/Comment-Section";
 
 export default function FullArticle({ article, setArticle }) {
   const { article_id } = useParams();

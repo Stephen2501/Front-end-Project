@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import ArticleCard from "./Article-Card";
-import TopicDropdown from "./Topic-Dropdown";
-import * as articleApi from "../utils/articleApi";
-import SortByDropdown from "./SortBy-Dropdown";
+import TopicDropdown from "../Filters/Topic-Dropdown";
+import * as articleApi from "../../utils/articleApi";
+import SortByDropdown from "../Filters/SortBy-Dropdown";
 
 
-import OrderBy from "./Order-By";
+import OrderBy from "../Filters/Order-By";
 
 export default function Articles({ articles, setArticles }) {
   const [sortBy, setSortBy] = useState("created_at");

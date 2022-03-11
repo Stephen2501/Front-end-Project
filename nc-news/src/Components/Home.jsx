@@ -1,5 +1,5 @@
-import FeaturedArticle from "./Featured-Article";
-import RandomArticle from "./Random-Article";
+import FeaturedArticle from "./Articles/Featured-Article";
+import RandomArticle from "./Articles/Random-Article";
 
 export default function Home({article, setArticle}) {
 	return (
