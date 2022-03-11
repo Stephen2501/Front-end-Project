@@ -20,7 +20,7 @@ export default function FeaturedArticle({article, setArticle}) {
 
   return (
     <div className="featured-article">
-      {article.title} <br/>
+      <h2>{article.title}</h2>
       {article.topic} <br/>
       Author: {article.author} <br />
       Votes: {article.votes} <br/>

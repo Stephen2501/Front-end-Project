@@ -1,11 +1,12 @@
 import FeaturedArticle from "./Featured-Article";
+import RandomArticle from "./Random-Article";
 
 export default function Home({article, setArticle}) {
 	return (
-	<div>
-	<h2>THIS IS A HOME PAGE!</h2>
-	<p> This is our featured article </p>
+	<div> <br/>
+	<h3>This is our featured article! </h3>
 	<FeaturedArticle article={article} setArticle={setArticle}/>
+	<RandomArticle />
 	</div>
 	)
 }
