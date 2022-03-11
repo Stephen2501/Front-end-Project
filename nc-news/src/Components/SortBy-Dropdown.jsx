@@ -1,3 +1,4 @@
+
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 
@@ -39,3 +40,4 @@ export default function SortByDropdown({setSortBy}) {
     </Dropdown>
     )
 }
+
