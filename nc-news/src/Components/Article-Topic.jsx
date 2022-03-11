@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import * as articleApi from "../utils/articleApi";
 import TopicDropdown from "./Topic-Dropdown";
 import SortByDropdown from "./SortBy-Dropdown";
@@ -10,12 +10,22 @@ import OrderBy from "./Order-By";
 export default function ArticleTopic({ articles, setArticles }) {
 
     const{topic} = useParams()
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState(null)
 
   useEffect(() => {
     articleApi
       .fetchArticlesByTopic(topic)
-      .then((articleFromApi) => setArticles(articleFromApi));
+      .then((articleFromApi) => {
+        setArticles(articleFromApi)
+        setIsLoading(false)
+      }).catch((err) => {
+        setError({err})
+      });
   }, [articles]);
+
+  if (error) return <h2>Topic does not exist!</h2>;
+  if (isLoading) return <h2>Content Loading...</h2>;
 
   return (
     <div>

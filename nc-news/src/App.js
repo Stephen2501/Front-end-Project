@@ -10,6 +10,7 @@ import Login from './Components/Login';
 import ArticleTopic from './Components/Article-Topic';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import { useState } from 'react';
+import Error from './Components/Error';
 import {UserLoginContext} from './Context/userLogin'
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/articles/:topic" element={<ArticleTopic setArticles={setArticles} articles={articles}/>} />
           <Route path="/article/:article_id" element={<FullArticle setArticle={setArticle} article={article}/>} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
       </UserLoginContext.Provider>

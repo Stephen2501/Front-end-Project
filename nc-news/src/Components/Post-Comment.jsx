@@ -8,6 +8,7 @@ export default function PostComment({article_id}) {
     const {currentUser, setCurrentUser} = useContext(UserLoginContext)
     const [newComment, setNewComment] = useState({body: ''})
     const [postMsg, setPostMsg] = useState('')
+    const [error, setError] = useState(null)
 
     const handleSubmit = (event) => {
 		event.preventDefault();
@@ -19,17 +20,14 @@ export default function PostComment({article_id}) {
                     realUser = true
                 }})
 				if (realUser) {
-                    console.log(newComment)
 					postComment(article_id, newComment).then(() => {
 						setPostMsg('Comment posted');
                         event.target.reset()
 					});
-                } else {
-                    setPostMsg('Unable to post comment, user does not exist');
                 }
 			})
-			.catch(() => {
-				setPostMsg('Unable to post comment, user does not exist');
+			.catch((err) => {
+				setError({err});
 			});
 	};
 
@@ -44,6 +42,7 @@ export default function PostComment({article_id}) {
                         return { ...preComment, username: currentUser, body: event.target.value};
                     })
                 }
+                required
             />
         </label> <br/><br />
         <button type='submit'>Post comment</button>

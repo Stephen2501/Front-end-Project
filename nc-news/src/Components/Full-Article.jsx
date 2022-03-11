@@ -6,23 +6,30 @@ import PostComment from "./Post-Comment";
 import CommentSection from "./Comment-Section";
 
 export default function FullArticle({ article, setArticle }) {
-
   const { article_id } = useParams();
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     articleApi
       .fetchArticleById(article_id)
       .then((articleFromApi) => {
-        setArticle(articleFromApi)
-        setIsLoading(false)
+        setArticle(articleFromApi);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError({ err });
       });
   }, []);
 
-  const date = new Date(Date.parse(article.created_at))
 
-  if(isLoading) return <h2>Content Loading...</h2>
-  
+  const date = new Date(Date.parse(article.created_at));
+  console.log(error)
+
+  if (error) return <h2>Article does not exist!</h2>;
+  if (isLoading) return <h2>Content Loading...</h2>;
+
+
   return (
     <article>
       <div className="full_article">
@@ -30,7 +37,8 @@ export default function FullArticle({ article, setArticle }) {
           {article.title} <br />
         </h1>
         <div className="created">
-          Posted: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`} <br />
+          Posted: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}{" "}
+          <br />
         </div>
         <h2 className="full_article_topic">
           Author: {article.author} <br />
@@ -42,10 +50,10 @@ export default function FullArticle({ article, setArticle }) {
         <div className="full_article_body">{article.body}</div>
       </div>
       <div className="post_comment">
-        <PostComment article_id={article_id}/>
+        <PostComment article_id={article_id} />
       </div>
       <div className="comment_section">
-        <CommentSection article_id={article_id}/>
+        <CommentSection article_id={article_id} />
       </div>
     </article>
   );
