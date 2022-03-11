@@ -6,7 +6,7 @@ export default function Login() {
 	const [newLogin, setNewLogin] = useState('');
 	const [loginMsg, setLoginMsg] = useState('');
 
-	const {currentUser, setCurrentUser} = useContext(UserLoginContext)
+	const {setCurrentUser} = useContext(UserLoginContext)
 
 	const handleSubmit = (event) => {
 		event.preventDefault();

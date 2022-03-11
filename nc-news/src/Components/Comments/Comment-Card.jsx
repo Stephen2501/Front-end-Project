@@ -4,7 +4,7 @@ import { UserLoginContext } from "../../Context/userLogin";
 
 export default function CommentCard({ comment }) {
   const [deleteMsg, setDeleteMsg] = useState("");
-  const { currentUser, setCurrentUser } = useContext(UserLoginContext);
+  const { currentUser} = useContext(UserLoginContext);
   const date = new Date(Date.parse(comment.created_at));
 
   return (

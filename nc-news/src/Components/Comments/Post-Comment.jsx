@@ -5,7 +5,7 @@ import { UserLoginContext } from '../../Context/userLogin'
 
 export default function PostComment({article_id}) {
 
-    const {currentUser, setCurrentUser} = useContext(UserLoginContext)
+    const {currentUser} = useContext(UserLoginContext)
     const [newComment, setNewComment] = useState({body: ''})
     const [postMsg, setPostMsg] = useState('')
     const [error, setError] = useState(null)
