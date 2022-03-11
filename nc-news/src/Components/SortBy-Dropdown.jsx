@@ -1,48 +1,43 @@
-// import Dropdown from 'react-bootstrap/Dropdown';
 
-// export default function SortByDropdown({setSortBy}) {
+import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
 
-//     return (<Dropdown>
-//         <Dropdown.Toggle
-//             variant='success'
-//             id='dropdown-sortby-button'
-//             title='Sort-By'>
-//             Sort By
-//         </Dropdown.Toggle>
+export default function SortByDropdown({setSortBy}) {
 
-//         <Dropdown.Menu>
-//             <Dropdown.Item
-//                 onClick={() => {
-//                     setSortBy('created_at');
-//                 }}
-//                 key='date'>
-//                     <Link to={'/articles/date'} setArticles={setArticles}
-//                 Date
-//             </Dropdown.Item>
+    return (
+    <Dropdown>
+        <Dropdown.Toggle
+            variant='success'
+            id='dropdown-sortby-button'
+            title='Sort-By'>
+            Sort By
+        </Dropdown.Toggle>
 
-//             <Dropdown.Item
-//                 onClick={() => {
-//                     setSortBy('comment_count');
-//                 }}
-//                 key='comment_count'>
-//                 Comment Count
-//             </Dropdown.Item>
+        <Dropdown.Menu>
+            <Dropdown.Item
+                onClick={() => setSortBy('created_at')}
+                as={Link}
+                to={'/articles?sort_by=created_at'} 
+                >
+                Date
+            </Dropdown.Item>
 
-//             <Dropdown.Item
-//                 onClick={() => {
-//                     setSortBy('votes');
-//                 }}
-//                 key='votes'>
-//                 Votes
-//             </Dropdown.Item>
+            <Dropdown.Item
+                onClick={() => setSortBy('comment_count')}
+                as={Link}
+                to={'/articles?sort_by=comment_count'} >
+                Comment Count
+            </Dropdown.Item>
 
-//             <Dropdown.Item
-//                 onClick={() => {
-//                     setSortBy('');
-//                 }}>
-//                 Reset
-//             </Dropdown.Item>
-//         </Dropdown.Menu>
-//     </Dropdown>
-//     )
-// }
+            <Dropdown.Item
+                onClick={() => setSortBy('votes')}
+                as={Link}
+                to={'/articles?sort_by=votes'} >
+                Votes
+            </Dropdown.Item>
+
+        </Dropdown.Menu>
+    </Dropdown>
+    )
+}
+
