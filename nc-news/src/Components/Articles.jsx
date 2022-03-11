@@ -10,16 +10,20 @@ import OrderBy from "./Order-By";
 export default function Articles({ articles, setArticles }) {
   const [sortBy, setSortBy] = useState("created_at");
   const [orderBy, setOrderBy] = useState("DESC");
-  
+  const [isLoading, setIsLoading] = useState(true)
 
 
 
   useEffect(() => {
     articleApi
       .fetchArticles(sortBy, orderBy)
-      .then((articlesFromApi) => setArticles(articlesFromApi));
+      .then((articlesFromApi) => {
+        setArticles(articlesFromApi)
+        setIsLoading(false)
+      });
   }, [sortBy, orderBy]);
 
+  if(isLoading) return <h2>Content loading...</h2>
 
   return (
 

@@ -6,15 +6,23 @@ import PostComment from "./Post-Comment";
 import CommentSection from "./Comment-Section";
 
 export default function FullArticle({ article, setArticle }) {
+
   const { article_id } = useParams();
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     articleApi
       .fetchArticleById(article_id)
-      .then((articleFromApi) => setArticle(articleFromApi));
+      .then((articleFromApi) => {
+        setArticle(articleFromApi)
+        setIsLoading(false)
+      });
   }, []);
 
   const date = new Date(Date.parse(article.created_at))
 
+  if(isLoading) return <h2>Content Loading...</h2>
+  
   return (
     <article>
       <div className="full_article">

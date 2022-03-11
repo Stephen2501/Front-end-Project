@@ -19,8 +19,6 @@ export default function ArticleTopic({ articles, setArticles }) {
 
   return (
     <div>
-      <SortByDropdown />
-      <OrderBy />
       <TopicDropdown />
       <ul className="articleList">
         {articles.map((article) => (
