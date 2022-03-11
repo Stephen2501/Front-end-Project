@@ -3,7 +3,6 @@ import ArticleCard from "./Article-Card";
 import TopicDropdown from "./Topic-Dropdown";
 import * as articleApi from "../utils/articleApi";
 import SortByDropdown from "./SortBy-Dropdown";
-import { useSearchParams } from "react-router-dom";
 import OrderBy from "./Order-By";
 
 export default function Articles({ articles, setArticles }) {
