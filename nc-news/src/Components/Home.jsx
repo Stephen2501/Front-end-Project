@@ -1,3 +1,12 @@
-export default function Home() {
-	return <h2>THIS IS A HOME PAGE!</h2>;
+import FeaturedArticle from "./Featured-Article";
+import RandomArticle from "./Random-Article";
+
+export default function Home({article, setArticle}) {
+	return (
+	<div> <br/>
+	<h3>This is our featured article! </h3>
+	<FeaturedArticle article={article} setArticle={setArticle}/>
+	<RandomArticle />
+	</div>
+	)
 }
