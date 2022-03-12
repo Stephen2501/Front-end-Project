@@ -1,5 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./css/App.css";
+import "./css/FullArticle.css"
+import "./css/Users.css"
+import "./css/Login.css"
+import "./css/Articles.css"
+import "./css/Home.css"
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Users from "./Components/Users/Users";

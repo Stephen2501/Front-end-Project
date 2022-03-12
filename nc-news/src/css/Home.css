@@ -1,0 +1,18 @@
+.featured-article {
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    list-style-type: none;
+    border: 3px double rgba(28, 110, 164, 0.41);
+    font-size: 100%;
+    text-align: centre;
+    background-color: rgb(249, 0, 199);
+    margin: 20px;
+  }
+  
+  .featured-article-body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: wheat;
+    list-style-type: none;
+    border: 3px double rgba(28, 110, 164, 0.41);
+  }
