@@ -19,8 +19,8 @@ export default function Users() {
 
 
 	return (
-	<div>
-	<ul className="articleList">
+	<div className="users-list">
+	<ul >
         {users.map((user) => (
           <UserCard key={user.username} user={user} />
         ))}

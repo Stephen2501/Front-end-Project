@@ -5,23 +5,17 @@ export default function ArticleCard({article}) {
     
 
     return (
-        <li className="articleCard" key={(article.article_id)}>
-            <div className="article_title">
+        <li className="article-card" key={(article.article_id)}>
+            <div className="article-title">
                 <Link to={`/article/${article.article_id}`} article_id={article.article_id}>{article.title} </Link>
             </div>
-            <div className="article_topic">
-            Topic: {article.topic}
+            <div className="article-left">
+            Topic: {article.topic}<br/>
+            Author: {article.author}<br/>
             </div>
-            <div className="article_author">
-            Author: {article.author}
-            </div>
-            <div className="article_votes">
-            Votes: {article.votes}
-            </div>
-            <div className="article_comment_count">
-            Comment Count: {article.comment_count}
-            </div>
-            <div className="article_date">
+            <div className="article-right">
+            Votes: {article.votes}<br/>
+            Comment Count: {article.comment_count}<br/>
             Created: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}
             </div>
         </li>

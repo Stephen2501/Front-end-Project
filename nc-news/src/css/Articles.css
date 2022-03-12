@@ -20,14 +20,14 @@
   }
 
   
-  .articleList {
+  .article-list {
     font-size: 150%;
     padding: 1%;
     margin: 1%;
     list-style-type: none;
   }
 
-  .articleCard {
+  .article-card {
     padding: 1%;
     list-style-type: none;
     font-size: 100%;
@@ -36,30 +36,26 @@
   }
   
   
-  .article_title {
-    font-size: 100%;
+  .article-title {
+    font-size: 150%;
+    text-align: left;
+    padding: 1%;
+    margin: 1%;
+
+  }
+  
+  .article-left {
+    margin: 1%;
+    padding: 1%;
     text-align: left;
   }
   
-  .article_topic {
-    text-align: left;
-  }
   
-  .article_author {
-    text-align: left;
-  }
-  
-  .article_votes {
+  .article-right {
+    margin: 1%;
+    padding: 1%;
     text-align: right;
   }
-  
-  .article_date {
-    text-align: right;
-  }
-  
-  .article_comment_count {
-    text-align: right;
-  }
-  
+
   
   

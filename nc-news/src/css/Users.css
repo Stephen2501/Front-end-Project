@@ -1,14 +1,23 @@
-.user_card {
-    padding: 10px;
+.users-list {
+  color: #495867;
+  list-style-type: none;
+  margin: 1%;
+}
+ul {
+  padding: 0%;
+}
+.user-card {
+    padding: 1%;
     list-style-type: none;
-    border: 3px double rgba(28, 110, 164, 0.41);
-    font-size: 100%;
+    font-size: 150%;
     text-align: centre;
-    background-color: rgb(227, 227, 21);
-    margin: 20px;
+    background-color: #bdd5ea;
+    margin: 2%;
   }
   
-  .user_avatar {
+  .user-avatar {
+    padding: 1%;
+    margin: 1%;
     height: 50%;
     width: 50%;
   }
