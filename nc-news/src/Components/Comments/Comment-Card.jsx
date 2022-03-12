@@ -4,8 +4,17 @@ import { UserLoginContext } from "../../Context/userLogin";
 
 export default function CommentCard({ comment }) {
   const [deleteMsg, setDeleteMsg] = useState("");
-  const { currentUser} = useContext(UserLoginContext);
+  const { currentUser } = useContext(UserLoginContext);
   const date = new Date(Date.parse(comment.created_at));
+
+  const handleDelete = () => {
+    if (comment.author === currentUser) {
+      deleteCommentById(comment.comment_id);
+      setDeleteMsg("Comment deleted");
+    } else {
+      setDeleteMsg("Can't delete comment that you are not author of");
+    }
+  };
 
   return (
     <li className="commentCard" key={comment.comment_id}>
@@ -20,19 +29,10 @@ export default function CommentCard({ comment }) {
       {comment.body}
       <br />
       <br />
-      <button
-        onClick={() => {
-          if (comment.author === currentUser) {
-            deleteCommentById(comment.comment_id);
-            setDeleteMsg('Comment deleted')
-        } else {
-            setDeleteMsg("Can't delete comment that you are not author of")
-        }
-        }}
-        value="delete item"
-      >
+      <button onClick={() => handleDelete()} value="delete item">
         Delete item
-      </button><br/>
+      </button>
+      <br />
       {deleteMsg}
     </li>
   );
