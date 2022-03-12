@@ -31,32 +31,33 @@ export default function FullArticle({ article, setArticle }) {
   return (
     <article>
       <div className="full-article-top-section">
-        <div className="full_article">
-          <h1 className="article_h1">
-            {article.title} <br />
-          </h1>
-          <div className="created">
-            Posted:{" "}
-            {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}{" "}
-            <br />
-          </div>
-          <h2 className="full_article_topic">
-            Author: {article.author} <br />
-            Topic: {article.topic} <br />
-          </h2>
-          <div className="full_article_info">
-            <Votes article={article} article_id={article_id} />
-          </div>
-          <div className="full_article_body">{article.body}</div>
+      <div className="full-article">
+        <h1 className="article-head">
+          {article.title} <br />
+        </h1>
+        <div className="full-article-info">
+        <div className="created">
+          Posted: {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}{" "}
+          <br />
         </div>
-        <div className="related-article">
-          <RelatedArticles topic={article.topic} />
+        <div className="full_article_topic">
+          Author: {article.author} <br />
+          Topic: {article.topic} <br />
         </div>
+        <div className="full-article-votes">
+          <Votes article={article} article_id={article_id} />
+        </div>
+        </div>
+        <div className="full-article-body">{article.body}</div>
       </div>
-      <div className="post_comment">
+      <div className="related-article">
+        <RelatedArticles topic={article.topic} />
+      </div>
+      </div>
+      <div className="post-comment">
         <PostComment article_id={article_id} />
       </div>
-      <div className="comment_section">
+      <div className="comment-section">
         <CommentSection article_id={article_id} />
       </div>
     </article>

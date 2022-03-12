@@ -14,7 +14,6 @@ export default function Login() {
 			.then((res) => {
 				let existingUsers = []
 				res.forEach((user) => existingUsers.push(user.username))
-				console.log(existingUsers)
 				if (existingUsers.includes(newLogin)) {
 					setLoginMsg('Successful login');
 					setCurrentUser(newLogin);

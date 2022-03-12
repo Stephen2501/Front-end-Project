@@ -1,45 +1,43 @@
 
+.articles {
+    font-size: 100%;
+    color: #495867;
+}
 
-.button1 {
-    font-size: 50px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: aqua;
-  }
+.sorts {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #bdd5ea;
+        margin: 4.5%;
+      }
   
   .order {
-    font-size: 23px;
+    font-size: 135%;
   }
   
   .order-buttons {
-    background-color: #FFDAB9;
+    background-color: #577399;
   }
 
-  .sorts {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: gray;
-  }
-
-
-  .articleCard {
-    padding: 10px;
-    list-style-type: none;
-    margin: 0;
-    border: 3px double rgba(28, 110, 164, 0.41);
-    font-size: 15px;
-    background-color: rgb(210, 83, 83);
-    margin: 15px;
-    -webkit-border-radius: 0px 12px 0px 12px;
-    border-radius: 0px 12px 0px 12px;
-  }
   
   .articleList {
-    padding: 0;
+    font-size: 150%;
+    padding: 1%;
+    margin: 1%;
     list-style-type: none;
   }
+
+  .articleCard {
+    padding: 1%;
+    list-style-type: none;
+    font-size: 100%;
+    background-color: #bdd5ea;
+    margin: 2%;
+  }
+  
   
   .article_title {
-    font-size: 20px;
+    font-size: 100%;
     text-align: left;
   }
   

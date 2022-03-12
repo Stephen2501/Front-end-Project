@@ -10,8 +10,8 @@ export default function RelatedArticles({ topic }) {
   useEffect(() => {
     fetchArticlesByTopic(topic)
       .then((articlesFromApi) => {
-          setRelatedTopicArticles(articlesFromApi.slice(0,4))
-            setIsLoading(false);
+        setRelatedTopicArticles(articlesFromApi.slice(0, 4));
+        setIsLoading(false);
       })
       .catch((err) => {
         setError({ err });
@@ -23,7 +23,9 @@ export default function RelatedArticles({ topic }) {
 
   return (
     <div className="related-article-section">
-        <h2>Related Articles</h2>
+      <div className="related-article-title">
+      Related Articles
+      </div>
       <ul className="related-article-list">
         {relatedTopicArticles.map((article) => (
           <RelatedArticleCard key={article.article_id} article={article} />

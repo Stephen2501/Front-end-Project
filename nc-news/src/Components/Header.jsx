@@ -4,12 +4,14 @@ import NavBar from './Nav-Bar';
 
 export default function Header() {
 	return (
-		<header>
+		<div>
+		<header className='head'>
 			<h1>NC News</h1>
-			<Link to='/login' className='accountAdmin'>
+			<Link to='/login' className='account-login'>
 				Login
 			</Link>
-			<NavBar />
 		</header>
+			<NavBar />
+		</div>
 	);
 }

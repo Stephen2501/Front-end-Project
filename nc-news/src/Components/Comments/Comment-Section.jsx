@@ -14,7 +14,7 @@ export default function CommentSection({article_id}) {
 
 
     return <div>
-       <ul className="commentList">
+       <ul className="comment-list">
         {comments.map((comment) => (
           <CommentCard key={comment.comment_id} comment={comment} />
         ))}

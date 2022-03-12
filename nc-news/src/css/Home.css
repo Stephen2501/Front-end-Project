@@ -1,18 +1,44 @@
-.featured-article {
-    padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    list-style-type: none;
-    border: 3px double rgba(28, 110, 164, 0.41);
+.home-page {
+   
+    font-size: 50px;
+  }
+
+h3 {
+    color: #495867;
     font-size: 100%;
-    text-align: centre;
-    background-color: rgb(249, 0, 199);
-    margin: 20px;
+}
+
+h2 {
+    color: #495867;
+    font-size: 175%;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+}
+
+.featured-article {
+    padding: 1%;
+    font-size: 75%;
+    text-align: left;
+    background-color: #f7f7ff;
+    margin: 4%;
+  }
+
+  .featured-article-info {
+      padding: 3%;
   }
   
   .featured-article-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    background-color: wheat;
+    padding: 1%;
+    margin: 2%;
+    background-color: #bdd5ea;
     list-style-type: none;
-    border: 3px double rgba(28, 110, 164, 0.41);
+    text-align: center;
   }
+
+  .button1 {
+    font-size: 50px;
+    background-color: #577399;
+    margin: 5%;
+  }
+
