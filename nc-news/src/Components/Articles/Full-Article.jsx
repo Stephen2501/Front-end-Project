@@ -24,7 +24,6 @@ export default function FullArticle({ article, setArticle }) {
 
 
   const date = new Date(Date.parse(article.created_at));
-  console.log(error)
 
   if (error) return <h2>Article does not exist!</h2>;
   if (isLoading) return <h2>Content Loading...</h2>;

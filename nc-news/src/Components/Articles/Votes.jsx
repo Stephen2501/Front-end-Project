@@ -12,7 +12,6 @@ export default function Votes({article, article_id}) {
 
     const handleClick = (voteChange) => {
         setVote((currentVotes) => {
-
             return (currentVotes + voteChange)
         })
         articleApi.voteOnArticle(article_id, {votes: voteChange})
