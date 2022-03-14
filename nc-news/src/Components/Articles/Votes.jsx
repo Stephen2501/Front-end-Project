@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as articleApi from "../../utils/articleApi";
 
 export default function Votes({ article, article_id }) {
-  const [vote, setVote] = useState(0);
+  const [vote, setVote] = useState('');
 
   useEffect(() => {
     setVote(article.votes);
@@ -19,16 +19,16 @@ export default function Votes({ article, article_id }) {
     );
   };
 
-  let voteChange = vote - article.votes;
+  let voteCrement = vote - article.votes;
 
   return (
     <section>
       <div className="vote-buttons">
-        <button disabled={voteChange === 1} onClick={() => handleClick(1)}>
+        <button disabled={voteCrement === 1} onClick={() => handleClick(1)}>
           Up-Vote
         </button>
       <div>Votes: {vote}</div>
-        <button disabled={voteChange === -1} onClick={() => handleClick(-1)}>
+        <button disabled={voteCrement === -1} onClick={() => handleClick(-1)}>
           Down-Vote
         </button>
       </div>

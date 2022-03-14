@@ -41,7 +41,7 @@ export default function Login() {
       <br />
       <br />
       <div className="login-button">
-        <button2 type="submit">Login</button2>
+        <button type="submit">Login</button>
       </div>
       <br />
       <div className="login-message">{loginMsg}</div>
