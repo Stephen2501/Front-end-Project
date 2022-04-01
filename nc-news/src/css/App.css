@@ -1,0 +1,69 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  background-color: #fe5f55;
+  font-size: 20px;
+}
+
+.App {
+  text-align: center;
+  background-color: #fe5f55;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.head {
+  font-size: 50px;
+}
+
+h1 {
+  color: #495867;
+  font-size: 150%;
+  font-weight: bolder;
+  padding: 2%;
+  margin: 1%;
+}
+
+.account-login {
+  font-size: 50%;
+  text-align: left;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1%;
+  padding: 1%;
+  color: #495867;
+
+}
+
+
+.navbar {
+  background-color: #f7f7ff;
+  overflow: hidden;
+  font-size: 200%;
+  padding: 2%;
+}
+
+a {
+  font-size: 60%;
+  color: #495867;
+}
+
+
+
+

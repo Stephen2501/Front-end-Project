@@ -8,6 +8,8 @@ import SortByDropdown from "../Filters/SortBy-Dropdown";
 import OrderBy from "../Filters/Order-By";
 
 export default function Articles({ articles, setArticles }) {
+
+
   const [sortBy, setSortBy] = useState("created_at");
   const [orderBy, setOrderBy] = useState("DESC");
   const [isLoading, setIsLoading] = useState(true)
@@ -27,7 +29,7 @@ export default function Articles({ articles, setArticles }) {
 
   return (
 
-    <div id="articles">
+    <div className="articles">
       <div className="sorts">
       <SortByDropdown setSortBy={setSortBy} />
       <div className="order">
@@ -35,7 +37,7 @@ export default function Articles({ articles, setArticles }) {
       </div>
       <TopicDropdown />
       </div>
-      <ul className="articleList">
+      <ul className="article-list">
         {articles.map((article) => (
           <ArticleCard key={article.article_id} article={article} />
         ))}

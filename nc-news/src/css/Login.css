@@ -1,0 +1,13 @@
+.login {
+    font-size: 35px;
+    margin: 2%;
+    padding: 2%;
+}
+
+
+.login-message {
+    padding: 2%;
+    margin: 2%;
+    font-size: 200%;
+    color: #495867;
+}

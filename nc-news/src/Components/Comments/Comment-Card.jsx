@@ -17,19 +17,23 @@ export default function CommentCard({ comment }) {
   };
 
   return (
-    <li className="commentCard" key={comment.comment_id}>
-      <div className="comment_author">
+    <li className="comment-card" key={comment.comment_id}>
+      <div className="comment-author">
         Author: {comment.author} <br />
       </div>
+      <div className="comment-info">
       Posted: {`${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`}
       <br />
       Votes: {comment.votes}
       <br />
       <br />
+      </div>
+      <div className="comment-body">
       {comment.body}
+      </div>
       <br />
       <br />
-      <button onClick={() => handleDelete()} value="delete item">
+      <button className="delete-comment" onClick={() => handleDelete()} value="delete item">
         Delete item
       </button>
       <br />

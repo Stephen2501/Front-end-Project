@@ -1,0 +1,146 @@
+article {
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 2%;
+  margin: 2%;
+  color: #495867;
+}
+
+.full-article-top-section {
+  display: flex;
+  list-style-type: none;
+}
+
+.full-article {
+  padding: 1%;
+  margin: 1%;
+  list-style-type: none;
+  font-size: 100%;
+  background-color: #f7f7ff;
+}
+
+.article-head {
+  font-size: 150%;
+  padding: 1%;
+  margin: 1%;
+}
+
+.full-article-info {
+  display: inline-flex;
+  padding: 1%;
+  margin: 1%;
+  align-items: center;
+}
+
+.created {
+  font-size: 80%;
+  padding: 1%;
+  margin: 1%;
+}
+
+.full-article-topic {
+  font-size: 80%;
+  padding: 1%;
+  margin: 1%;
+}
+
+.full-article-votes {
+  font-size: 80%;
+  padding: 2%;
+  margin: 2%;
+}
+
+button {
+  font-size: 90%;
+  background-color: #bdd5ea;
+}
+
+.full-article-body {
+  font-size: 100%;
+  background-color: #bdd5ea;
+  padding: 1%;
+  margin: 1%;
+}
+
+.related-article-section {
+  background-color: #f7f7ff;
+  color: #495867;
+  width: 200px;
+  padding: 2%;
+  margin: 3.95%;
+}
+
+.related-article-title {
+  font-size: 80%;
+  padding: 1%;
+  margin: 1%;
+  font-weight: bold;
+}
+
+.related-article-list {
+  margin: 1%;
+  padding: 2%;
+  list-style-type: none;
+}
+
+.related-article-card {
+  margin: 3%;
+  padding: 4%;
+  list-style-type: none;
+  background-color: #bdd5ea;
+  font-size: 80%;
+  text-align: left;
+}
+
+.post-comment {
+  padding: 10px;
+  list-style-type: none;
+  border: 3px double rgba(28, 110, 164, 0.41);
+  font-size: 100%;
+  text-align: centre;
+  background-color: #bdd5ea;
+  margin: 20px;
+}
+
+.comment-button {
+  background-color: #495867;
+  color: #bdd5ea;
+}
+
+.comment-list {
+  margin: 2%;
+  padding: 1%;
+  list-style-type: none;
+}
+
+.comment-card {
+  padding: 1%;
+  margin: 1%;
+  list-style-type: none;
+  font-size: 100%;
+  text-align: left;
+  background-color: #bdd5ea;
+}
+
+.comment-author {
+  margin: 1%;
+  padding: 1%;
+  font-size: 150%;
+}
+
+.comment-info {
+  margin: 1%;
+  padding: 1%;
+  font-size: 100%;
+}
+
+.comment-body {
+  margin: 1%;
+  padding: 1%;
+  font-size: 125%;
+}
+
+.delete-comment {
+  margin: 1%;
+  padding: 1%;
+}

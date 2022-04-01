@@ -1,0 +1,23 @@
+.users-list {
+  color: #495867;
+  list-style-type: none;
+  margin: 1%;
+}
+ul {
+  padding: 0%;
+}
+.user-card {
+    padding: 1%;
+    list-style-type: none;
+    font-size: 150%;
+    text-align: centre;
+    background-color: #bdd5ea;
+    margin: 2%;
+  }
+  
+  .user-avatar {
+    padding: 1%;
+    margin: 1%;
+    height: 50%;
+    width: 50%;
+  }

@@ -1,0 +1,61 @@
+
+.articles {
+    font-size: 100%;
+    color: #495867;
+}
+
+.sorts {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #bdd5ea;
+        margin: 4.5%;
+      }
+  
+  .order {
+    font-size: 135%;
+  }
+  
+  .order-buttons {
+    background-color: #577399;
+  }
+
+  
+  .article-list {
+    font-size: 150%;
+    padding: 1%;
+    margin: 1%;
+    list-style-type: none;
+  }
+
+  .article-card {
+    padding: 1%;
+    list-style-type: none;
+    font-size: 100%;
+    background-color: #bdd5ea;
+    margin: 2%;
+  }
+  
+  
+  .article-title {
+    font-size: 150%;
+    text-align: left;
+    padding: 1%;
+    margin: 1%;
+
+  }
+  
+  .article-left {
+    margin: 1%;
+    padding: 1%;
+    text-align: left;
+  }
+  
+  
+  .article-right {
+    margin: 1%;
+    padding: 1%;
+    text-align: right;
+  }
+
+  
+  
