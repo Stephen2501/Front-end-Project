@@ -2,24 +2,27 @@ import { useState, useEffect } from "react";
 import * as articleApi from "../../utils/articleApi";
 
 export default function Votes({ article, article_id }) {
-  const [vote, setVote] = useState('');
-
+  const [vote, setVote] = useState(0);
+  
   useEffect(() => {
     setVote(article.votes);
-  }, [article]);
-
+  }, []);
+  
   const handleClick = (voteChange) => {
     setVote((currentVotes) => {
       return currentVotes + voteChange;
     });
-    articleApi.voteOnArticle(article_id, { votes: voteChange }).catch((err) =>
-      setVote((currentVotes) => {
-        return currentVotes - voteChange;
-      })
+    articleApi.voteOnArticle(article_id, { votes: voteChange })
+    .catch((err) =>
+    setVote((currentVotes) => {
+      return (currentVotes - voteChange);
+    })
     );
   };
-
-  let voteCrement = vote - article.votes;
+  
+  let voteCrement = (vote - article.votes);
+  
+  console.log('yikes')
 
   return (
     <section>

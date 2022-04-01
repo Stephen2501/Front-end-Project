@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Votes from "../Articles/Votes";
 import PostComment from "../Comments/Post-Comment";
 import CommentSection from "../Comments/Comment-Section";
-import RelatedArticles from "./Related-Articles";
 
 export default function FullArticle({ article, setArticle }) {
   const { article_id } = useParams();
@@ -21,7 +20,8 @@ export default function FullArticle({ article, setArticle }) {
       .catch((err) => {
         setError({ err });
       });
-  }, [article]);
+  }, []);
+
 
   const date = new Date(Date.parse(article.created_at));
 
@@ -49,9 +49,6 @@ export default function FullArticle({ article, setArticle }) {
         </div>
         </div>
         <div className="full-article-body">{article.body}</div>
-      </div>
-      <div className="related-article">
-        <RelatedArticles topic={article.topic} />
       </div>
       </div>
       <div className="post-comment">
