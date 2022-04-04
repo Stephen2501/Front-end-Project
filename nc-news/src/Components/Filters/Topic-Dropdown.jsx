@@ -13,7 +13,7 @@ export default function TopicDropdown({setArticles}) {
   }, []);
 
   return (
-    <Dropdown>
+    <Dropdown class="dropdown">
       <Dropdown.Toggle
         variant="success"
         id="dropdown-category-button"
