@@ -3,7 +3,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 import { fetchTopics } from "../../utils/topicApi";
 
-export default function TopicDropdown({setArticles}) {
+export default function TopicDropdown() {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
@@ -25,23 +25,14 @@ export default function TopicDropdown({setArticles}) {
       <Dropdown.Menu>
         {topics.map((topic) => (
           <Dropdown.Item
-            item={topic}
-            key={topic.slug}
-            
-          >
-            <Link
-              to={`/articles/${topic.slug}`}
-
-              setArticles={setArticles}
-
-              topic={`${topic.slug}`}
-              >
-              {topic.slug}
-            </Link>
+          as={Link}
+          to={`/articles/${topic.slug}`}
+          >{topic.slug}
           </Dropdown.Item>
         ))}
-        <Dropdown.Item>
-          <Link to="/articles">Reset</Link>
+        <Dropdown.Item
+          as={Link} 
+          to="/articles/">Reset
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

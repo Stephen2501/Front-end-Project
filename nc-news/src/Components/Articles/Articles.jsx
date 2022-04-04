@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ArticleCard from "./Article-Card";
+import OrderMsg from "./Order-Message";
 import TopicDropdown from "../Filters/Topic-Dropdown";
 import * as articleApi from "../../utils/articleApi";
 import SortByDropdown from "../Filters/SortBy-Dropdown";
@@ -14,8 +15,6 @@ export default function Articles({ articles, setArticles }) {
   const [orderBy, setOrderBy] = useState("DESC");
   const [isLoading, setIsLoading] = useState(true)
 
-
-
   useEffect(() => {
     articleApi
       .fetchArticles(sortBy, orderBy)
@@ -28,15 +27,15 @@ export default function Articles({ articles, setArticles }) {
   if(isLoading) return <h2>Content loading...</h2>
 
   return (
-
     <div className="articles">
       <div className="sorts">
       <SortByDropdown setSortBy={setSortBy} />
       <div className="order">
       <OrderBy setOrderBy={setOrderBy} />
       </div>
-      <TopicDropdown />
+      <TopicDropdown/>
       </div>
+      <OrderMsg orderBy={orderBy} sortBy={sortBy}/>
       <ul className="article-list">
         {articles.map((article) => (
           <ArticleCard key={article.article_id} article={article} />
