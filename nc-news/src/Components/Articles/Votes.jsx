@@ -22,8 +22,6 @@ export default function Votes({ article, article_id }) {
   
   let voteCrement = (vote - article.votes);
   
-  console.log('yikes')
-
   return (
     <section>
       <div className="vote-buttons">
