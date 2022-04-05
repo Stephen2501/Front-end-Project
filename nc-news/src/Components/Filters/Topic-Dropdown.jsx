@@ -25,6 +25,7 @@ export default function TopicDropdown() {
       <Dropdown.Menu>
         {topics.map((topic) => (
           <Dropdown.Item
+          key={topic.slug}
           as={Link}
           to={`/articles/${topic.slug}`}
           >{topic.slug}

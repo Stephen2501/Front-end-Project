@@ -20,7 +20,7 @@ export default function ArticleTopic({ articles, setArticles }) {
       }).catch((err) => {
         setError({err})
       });
-  }, [articles]);
+  }, [topic]);
 
   if (error) return <h2>Topic does not exist!</h2>;
   if (isLoading) return <h2>Content Loading...</h2>;
