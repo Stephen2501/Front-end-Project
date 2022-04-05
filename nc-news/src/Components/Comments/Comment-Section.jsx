@@ -10,7 +10,7 @@ export default function CommentSection({article_id}) {
         fetchComments(article_id).then((commentsFromApi) => {
             setComments(commentsFromApi)
         })
-    }, [comments])
+    }, [])
 
 
     return <div>
