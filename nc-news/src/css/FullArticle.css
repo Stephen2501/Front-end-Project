@@ -3,7 +3,8 @@ article {
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 2%;
   margin: 2%;
-  color: #495867;
+  border: 8px solid #2b2d42;
+  color: #2b2d42;
 }
 
 .full-article-top-section {
@@ -16,7 +17,7 @@ article {
   margin: 1%;
   list-style-type: none;
   font-size: 100%;
-  background-color: #f7f7ff;
+  background-color: #2d6a4f;
 }
 
 .article-head {
@@ -52,59 +53,35 @@ article {
 
 button {
   font-size: 90%;
-  background-color: #bdd5ea;
+  background-color: #8d99ae;
+  color: #2b2d42;
+  border: 10px inset #2b2d42;
 }
 
 .full-article-body {
   font-size: 100%;
-  background-color: #bdd5ea;
+  background-color: #8d99ae;
+  color: #2b2d42;
+  border: 4px solid #2b2d42;
   padding: 1%;
   margin: 1%;
 }
 
-.related-article-section {
-  background-color: #f7f7ff;
-  color: #495867;
-  width: 200px;
-  padding: 2%;
-  margin: 3.95%;
-}
-
-.related-article-title {
-  font-size: 80%;
-  padding: 1%;
-  margin: 1%;
-  font-weight: bold;
-}
-
-.related-article-list {
-  margin: 1%;
-  padding: 2%;
-  list-style-type: none;
-}
-
-.related-article-card {
-  margin: 3%;
-  padding: 4%;
-  list-style-type: none;
-  background-color: #bdd5ea;
-  font-size: 80%;
-  text-align: left;
-}
 
 .post-comment {
   padding: 10px;
   list-style-type: none;
-  border: 3px double rgba(28, 110, 164, 0.41);
+  border: 4px solid #2b2d42;
   font-size: 100%;
   text-align: centre;
-  background-color: #bdd5ea;
+  background-color: #ef233c;
   margin: 20px;
 }
 
 .comment-button {
-  background-color: #495867;
-  color: #bdd5ea;
+  background-color: #8d99ae;
+  color: #2b2d42;
+  border: 5px inset #2b2d42;
 }
 
 .comment-list {
@@ -115,11 +92,12 @@ button {
 
 .comment-card {
   padding: 1%;
+  border: 4px solid #2b2d42;
   margin: 1%;
   list-style-type: none;
   font-size: 100%;
   text-align: left;
-  background-color: #bdd5ea;
+  background-color: #ef233c;
 }
 
 .comment-author {
@@ -143,4 +121,7 @@ button {
 .delete-comment {
   margin: 1%;
   padding: 1%;
+  background-color: #8d99ae;
+  color: #2b2d42;
+  border: 5px inset #2b2d42;
 }

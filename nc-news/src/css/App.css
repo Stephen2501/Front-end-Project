@@ -18,13 +18,12 @@
 }
 
 html {
-  background-color: #fe5f55;
   font-size: 20px;
 }
 
 .App {
   text-align: center;
-  background-color: #fe5f55;
+  background-color: #edf2f4;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -33,7 +32,9 @@ html {
 }
 
 h1 {
-  color: #495867;
+  background-color: #2b2d42;
+  border: 9px double #8d99ae;
+  color: #8d99ae;
   font-size: 150%;
   font-weight: bolder;
   padding: 2%;
@@ -47,16 +48,19 @@ h1 {
   justify-content: flex-end;
   margin: 1%;
   padding: 1%;
-  color: #495867;
+  color: #8d99ae;
 
 }
 
 
 .navbar {
-  background-color: #f7f7ff;
+  background-color: #2b2d42;
+  border: 9px double #8d99ae;
   overflow: hidden;
   font-size: 200%;
   padding: 2%;
+  margin: 1%;
+  color: #8d99ae;
 }
 
 a {

@@ -1,44 +1,45 @@
 .home-page {
-   
-    font-size: 50px;
-  }
+	font-size: 50px;
+}
 
 h3 {
-    color: #495867;
-    font-size: 100%;
+	color: #495867;
+	font-size: 100%;
 }
 
 h2 {
-    color: #495867;
-    font-size: 175%;
-    text-align: center;
-    padding: 2%;
-    margin: 2%;
+	color: #495867;
+	font-size: 175%;
+	text-align: center;
+	padding: 2%;
+	margin: 2%;
 }
 
 .featured-article {
-    padding: 1%;
-    font-size: 75%;
-    text-align: left;
-    background-color: #f7f7ff;
-    margin: 4%;
-  }
+	padding: 1%;
+	font-size: 75%;
+	text-align: left;
+	background-color: #ef233c;
+	border: 9px double #8d99ae;
+	margin: 4%;
+}
 
-  .featured-article-info {
-      padding: 3%;
-  }
-  
-  .featured-article-body {
-    padding: 1%;
-    margin: 2%;
-    background-color: #bdd5ea;
-    list-style-type: none;
-    text-align: center;
-  }
+.featured-article-info {
+	padding: 3%;
+}
 
-  .button1 {
-    font-size: 50px;
-    background-color: #577399;
-    margin: 5%;
-  }
+.featured-article-body {
+	padding: 1%;
+	margin: 2%;
+	background-color: #bdd5ea;
+	list-style-type: none;
+	text-align: center;
+}
 
+.button1 {
+	font-size: 50px;
+	background-color: #8d99ae;
+	color: #2b2d42;
+	border: 10px inset #2b2d42;
+	margin: 5%;
+}

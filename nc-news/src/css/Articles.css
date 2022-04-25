@@ -1,22 +1,24 @@
 
 .articles {
-    font-size: 100%;
-    color: #495867;
+    font-size: 10%;
+    color: #8d99ae;
+    margin: 1%;
+    background-color: #2b2d42;
+    border: 9px double #8d99ae;
 }
 
 .sorts {
         display: flex;
         justify-content: space-evenly;
-        background-color: #bdd5ea;
         margin: 4.5%;
       }
   
   .order {
-    font-size: 135%;
+    font-size: 141%;
   }
   
   .order-buttons {
-    background-color: #577399;
+    background-color: #8d99ae;
   }
 
   
@@ -29,9 +31,11 @@
 
   .article-card {
     padding: 1%;
+    color: #8d99ae;
     list-style-type: none;
     font-size: 100%;
-    background-color: #bdd5ea;
+    border: 4px ridge #8d99ae;
+    background-color: #ef233c;
     margin: 2%;
   }
   
