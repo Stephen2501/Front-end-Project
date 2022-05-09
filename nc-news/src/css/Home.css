@@ -21,6 +21,7 @@ h2 {
     font-size: 75%;
     text-align: left;
     background-color: #f7f7ff;
+    border: 9px double #8d99ae;
     margin: 4%;
   }
 
@@ -40,5 +41,6 @@ h2 {
     font-size: 50px;
     background-color: #577399;
     margin: 5%;
+    border: 10px inset #2b2d42;
   }
 

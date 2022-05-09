@@ -1,7 +1,9 @@
 
 .articles {
     font-size: 100%;
+    margin: 1%;
     color: #495867;
+    border: 9px double #8d99ae;
 }
 
 .sorts {
@@ -12,7 +14,7 @@
       }
   
   .order {
-    font-size: 135%;
+    font-size: 100%;
   }
   
   .order-buttons {
@@ -31,6 +33,7 @@
     padding: 1%;
     list-style-type: none;
     font-size: 100%;
+    border: 4px ridge #8d99ae;
     background-color: #bdd5ea;
     margin: 2%;
   }

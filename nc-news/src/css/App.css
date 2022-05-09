@@ -18,13 +18,13 @@
 }
 
 html {
-  background-color: #fe5f55;
+  background-color: #40916c;
   font-size: 20px;
 }
 
 .App {
   text-align: center;
-  background-color: #fe5f55;
+  background-color: #40916c;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -34,10 +34,12 @@ html {
 
 h1 {
   color: #495867;
+  border: 9px double #8d99ae;
   font-size: 150%;
   font-weight: bolder;
   padding: 2%;
   margin: 1%;
+  background-color: white;
 }
 
 .account-login {
@@ -54,9 +56,11 @@ h1 {
 
 .navbar {
   background-color: #f7f7ff;
+  border: 9px double #8d99ae;
   overflow: hidden;
   font-size: 200%;
-  padding: 2%;
+  padding: 1%;
+  margin: 1%
 }
 
 a {
